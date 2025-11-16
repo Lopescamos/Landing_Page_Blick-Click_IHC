@@ -1,52 +1,36 @@
-name: Deploy site to GitHub Pages (from public/)
+name: Deploy public to GitHub Pages
 
-# Ejecuta cuando hagas push a main (cambia a tu rama si usas otra)
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
 
 permissions:
-  contents: read # leer el repo
-  pages: write # publicar Pages
-  id-token: write # necesario si usas OIDC (no obligatorio aquí)
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      # --- Opcional: Si necesitas construir (p. ej. npm run build que genera public/)
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v4
-      #   with:
-      #     node-version: '18'
-      #
-      # - name: Install dependencies
-      #   run: npm ci
-      #
-      # - name: Build site
-      #   run: npm run build
-      #
-      # Asegúrate que tu proceso de build genere la carpeta `public/`.
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
 
-      - name: Ensure public folder exists
-        run: |
-          if [ ! -d "public" ]; then
-            echo "La carpeta public/ no existe — fallando el job."
-            ls -la
-            exit 1
-          fi
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v3
-
-      - name: Upload artifact from public/
-        uses: actions/upload-pages-artifact@v1
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: public
+          path: public   # 👈 tu carpeta con el sitio
 
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        id: deployment
+        uses: actions/deploy-pages@v4
