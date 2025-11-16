@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contáctanos | Blink Click</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <script src="On.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <h1>
+            <a href="index.html"
+              ><img
+                src="assets/images/blinkclick.png"
+                alt="Blink Click"
+                class="logo-img"
+            /></a>
+          </h1>
+        </div>
+        <ul class="nav-links">
+          <li class="nav-item-dropdown">
+            <a href="index.html" class="nav-link-dropdown">Inicio</a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html#testimonios">Testimonios</a></li>
+              <li><a href="index.html#mision">Misión</a></li>
+              <li><a href="index.html#vision">Visión</a></li>
+              <li><a href="index.html#caracteristicas">Características</a></li>
+              <li><a href="index.html#funcionamiento">Funcionamiento</a></li>
+            </ul>
+          </li>
+          <li><a href="conocenos.html">Conócenos</a></li>
+          <li><a href="aliados.html">Aliados</a></li>
+        </ul>
+        <div class="nav-buttons" id="navButtons">
+          <div class="nav-button-dropdown">
+            <button class="btn-acceder">Acceder</button>
+            <ul class="dropdown-menu">
+              <li><a href="login-paciente.html">Paciente</a></li>
+              <li><a href="login-cuidador.html">Cuidador</a></li>
+            </ul>
+          </div>
+          <div class="nav-button-dropdown">
+            <button class="btn-registrarse">Registrarse</button>
+            <ul class="dropdown-menu">
+              <li><a href="registro-paciente.html">Paciente</a></li>
+              <li><a href="registro-cuidador.html">Cuidador</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="nav-user-container"
+          id="navUserContainer"
+          style="display: none; position: relative"
+        >
+          <div class="nav-user" id="navUser">
+            <span
+              style="
+                color: #fff;
+                font-weight: 500;
+                font-size: 1rem;
+                cursor: pointer;
+              "
+              id="userName"
+            ></span>
+          </div>
+          <div
+            class="user-dropdown-menu"
+            id="userDropdownMenu"
+            style="display: none"
+          >
+            <button class="btn-cerrar-sesion" id="btnCerrarSesion">
+              Cerrar Sesión
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sección Contactanos -->
+    <section
+      style="
+        min-height: 100vh;
+        background: linear-gradient(
+          135deg,
+          #000000 0%,
+          #1a0033 50%,
+          #000000 100%
+        );
+        padding: 6rem 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <h1
+        style="
+          font-size: 4rem;
+          font-weight: 700;
+          color: #ffffff;
+          margin-bottom: 4rem;
+          text-align: center;
+          font-family: 'Roboto', sans-serif;
+        "
+      >
+        CONTACTANOS
+      </h1>
+
+      <div id="contactFormContainer" style="max-width: 800px; width: 100%">
+        <form
+          id="contactForm"
+          style="display: flex; flex-direction: column; gap: 1.5rem"
+        >
+          <!-- Fila de 4 campos -->
+          <div
+            class="contact-form-row"
+            style="
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              gap: 1rem;
+            "
+          >
+            <div style="position: relative">
+              <label
+                for="rol"
+                style="color: rgba(255, 255, 255, 0.9); font-size: 0.9rem"
+                >Rol</label
+              >
+              <select
+                id="rol"
+                name="rol"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.75rem;
+                  border: 2px solid rgba(255, 255, 255, 0.2);
+                  border-radius: 5px;
+                  background-color: rgba(255, 255, 255, 0.1);
+                  color: #ffffff;
+                  font-size: 1rem;
+                  cursor: pointer;
+                  appearance: none;
+                "
+              >
+                <option value="" style="background: #1b004b">
+                  Seleccionar
+                </option>
+                <option value="paciente" style="background: #1b004b">
+                  Paciente
+                </option>
+                <option value="cuidador" style="background: #1b004b">
+                  Cuidador
+                </option>
+              </select>
+            </div>
+
+            <div>
+              <label
+                for="telefono"
+                style="color: rgba(255, 255, 255, 0.9); font-size: 0.9rem"
+                >Teléfono</label
+              >
+              <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.75rem;
+                  border: 2px solid rgba(255, 255, 255, 0.2);
+                  border-radius: 5px;
+                  background-color: rgba(255, 255, 255, 0.1);
+                  color: #ffffff;
+                "
+                placeholder="Ej: +51 999 999 999"
+              />
+            </div>
+
+            <div>
+              <label
+                for="correo"
+                style="color: rgba(255, 255, 255, 0.9); font-size: 0.9rem"
+                >Correo Electrónico</label
+              >
+              <input
+                type="email"
+                id="correo"
+                name="correo"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.75rem;
+                  border: 2px solid rgba(255, 255, 255, 0.2);
+                  border-radius: 5px;
+                  background-color: rgba(255, 255, 255, 0.1);
+                  color: #ffffff;
+                "
+                placeholder="correo@ejemplo.com"
+              />
+            </div>
+
+            <div>
+              <label
+                for="nombre"
+                style="color: rgba(255, 255, 255, 0.9); font-size: 0.9rem"
+                >Nombre</label
+              >
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+                style="
+                  width: 100%;
+                  padding: 0.75rem;
+                  border: 2px solid rgba(255, 255, 255, 0.2);
+                  border-radius: 5px;
+                  background-color: rgba(255, 255, 255, 0.1);
+                  color: #ffffff;
+                "
+                placeholder="Tu nombre"
+              />
+            </div>
+          </div>
+
+          <!-- Consulta -->
+          <div>
+            <label
+              for="consulta"
+              style="color: rgba(255, 255, 255, 0.9); font-size: 1rem"
+              >Manda tu consulta</label
+            >
+            <textarea
+              id="consulta"
+              name="consulta"
+              required
+              style="
+                width: 100%;
+                min-height: 150px;
+                padding: 1rem;
+                border: 2px solid rgba(255, 255, 255, 0.2);
+                border-radius: 5px;
+                background-color: rgba(255, 255, 255, 0.1);
+                color: #ffffff;
+                resize: vertical;
+              "
+              placeholder="Escribe tu consulta aquí..."
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            style="
+              width: 100%;
+              padding: 1rem;
+              background: #207949;
+              color: #fff;
+              font-size: 1.1rem;
+              font-weight: 600;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          >
+            Enviar
+          </button>
+        </form>
+      </div>
+
+      <div
+        id="successMessage"
+        style="display: none; margin-top: 2rem; text-align: center"
+      >
+        <p style="font-size: 2rem; font-weight: 600; color: #207949">
+          ¡Enviado con éxito!
+        </p>
+      </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-box">
+          <h3>Legales</h3>
+          <a
+            href="https://www.privacypolicies.com/live/5c0f1fe1-d2ce-4b02-bdc1-44d30b8fac1a"
+            target="_blank"
+            >Política de Privacidad</a
+          >
+          <a
+            href="https://www.termsfeed.com/live/53dbfda6-05ca-4663-9b67-9c5eca29f3da"
+            target="_blank"
+            >Términos y Condiciones</a
+          >
+          <a href="https://gdpr.eu/es/" target="_blank">Protección de Datos</a>
+        </div>
+
+        <div class="footer-box">
+          <h3>Llámanos</h3>
+          <p>01 311 6000 (Lima)</p>
+          <p>0 801 1 6000 (Provincia)</p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Contáctanos</h3>
+          <p>Envíanos un formulario</p>
+          <p>
+            <a href="contactanos.html" style="color: #207949; font-weight: 600"
+              >Llenar ></a
+            >
+          </p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Redes sociales</h3>
+          <div class="social-icons">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              class="social-icon"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              class="social-icon"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              class="social-icon"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Código JS idéntico
+      const usuario = localStorage.getItem("usuario");
+      const logueado = localStorage.getItem("logueado");
+      const navButtons = document.getElementById("navButtons");
+      const navUserContainer = document.getElementById("navUserContainer");
+      const userName = document.getElementById("userName");
+
+      if (logueado === "true" && usuario) {
+        navButtons.style.display = "none";
+        navUserContainer.style.display = "block";
+        userName.textContent = usuario;
+      }
+
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          document.getElementById("contactFormContainer").style.display =
+            "none";
+          document.getElementById("successMessage").style.display = "block";
+          this.reset();
+
+          setTimeout(() => {
+            document.getElementById("contactFormContainer").style.display =
+              "block";
+            document.getElementById("successMessage").style.display = "none";
+          }, 3000);
+        });
+    </script>
+  </body>
+</html>

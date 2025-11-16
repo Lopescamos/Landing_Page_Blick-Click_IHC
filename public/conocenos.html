@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conócenos | Blink Click</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/styles/styles.css" />
+    <script src="On.js" defer></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <h1>
+            <a href="index.html"
+              ><img
+                src="assets/images/blinkclick.png"
+                alt="Blink Click"
+                class="logo-img"
+            /></a>
+          </h1>
+        </div>
+        <ul class="nav-links">
+          <li class="nav-item-dropdown">
+            <a href="index.html" class="nav-link-dropdown">Inicio</a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html#testimonios">Testimonios</a></li>
+              <li><a href="index.html#mision">Misión</a></li>
+              <li><a href="index.html#vision">Visión</a></li>
+              <li><a href="index.html#caracteristicas">Características</a></li>
+              <li><a href="index.html#funcionamiento">Funcionamiento</a></li>
+            </ul>
+          </li>
+          <li><a href="conocenos.html">Conócenos</a></li>
+          <li><a href="aliados.html">Aliados</a></li>
+        </ul>
+        <div class="nav-buttons" id="navButtons">
+          <div class="nav-button-dropdown">
+            <button class="btn-acceder">Acceder</button>
+            <ul class="dropdown-menu">
+              <li><a href="login-paciente.html">Paciente</a></li>
+              <li><a href="login-cuidador.html">Cuidador</a></li>
+            </ul>
+          </div>
+          <div class="nav-button-dropdown">
+            <button class="btn-registrarse">Registrarse</button>
+            <ul class="dropdown-menu">
+              <li><a href="registro-paciente.html">Paciente</a></li>
+              <li><a href="registro-cuidador.html">Cuidador</a></li>
+            </ul>
+          </div>
+        </div>
+        <div
+          class="nav-user-container"
+          id="navUserContainer"
+          style="display: none"
+        >
+          <div class="nav-user" id="navUser">
+            <span id="userName"></span>
+          </div>
+          <div
+            class="user-dropdown-menu"
+            id="userDropdownMenu"
+            style="display: none"
+          >
+            <button class="btn-cerrar-sesion" id="btnCerrarSesion">
+              Cerrar Sesión
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Sección Fundadores -->
+    <section class="fundadores-section">
+      <h1 class="fundadores-title">FUNDADORES</h1>
+
+      <div class="fundadores-grid">
+        <div class="fundadores-item">
+          <img
+            src="assets/images/integrante1.jpg"
+            alt="Integrante 1"
+            class="fundadores-img"
+          />
+        </div>
+        <div class="fundadores-item">
+          <img
+            src="assets/images/integrante2.jpg"
+            alt="Integrante 2"
+            class="fundadores-img"
+          />
+        </div>
+        <div class="fundadores-item">
+          <img
+            src="assets/images/integrante3.jpg"
+            alt="Integrante 3"
+            class="fundadores-img"
+          />
+        </div>
+        <div class="fundadores-item">
+          <img
+            src="assets/images/integrante4.jpg"
+            alt="Integrante 4"
+            class="fundadores-img"
+          />
+        </div>
+        <div class="fundadores-item">
+          <img
+            src="assets/images/integrante5.jpg"
+            alt="Integrante 5"
+            class="fundadores-img"
+          />
+        </div>
+        <div class="fundadores-item">
+          <img
+            src="assets/images/integrante6.jpg"
+            alt="Integrante 6"
+            class="fundadores-img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-box">
+          <h3>Legales</h3>
+
+          <a
+            href="https://www.privacypolicies.com/live/5c0f1fe1-d2ce-4b02-bdc1-44d30b8fac1a"
+            target="_blank"
+          >
+            Política de Privacidad
+          </a>
+
+          <a
+            href="https://www.termsfeed.com/live/53dbfda6-05ca-4663-9b67-9c5eca29f3da"
+            target="_blank"
+          >
+            Términos y Condiciones
+          </a>
+
+          <a href="https://gdpr.eu/es/" target="_blank">
+            Protección de Datos
+          </a>
+        </div>
+        <div class="footer-box">
+          <h3>Llámanos</h3>
+          <p>01 311 6000 (Lima)</p>
+          <p>0 801 1 6000 (Provincia)</p>
+        </div>
+        <div class="footer-box">
+          <h3>Contáctanos</h3>
+          <p>Envíanos un formulario</p>
+          <p><a href="contactanos.html" class="auth-link">Llenar ></a></p>
+        </div>
+        <div class="footer-box">
+          <h3>Redes sociales</h3>
+          <div class="social-icons">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              aria-label="Facebook"
+              class="social-icon"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com"
+              target="_blank"
+              aria-label="LinkedIn"
+              class="social-icon"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://www.youtube.com"
+              target="_blank"
+              aria-label="YouTube"
+              class="social-icon"
+            >
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script de login/logout -->
+    <script>
+      const usuario = localStorage.getItem("usuario");
+      const logueado = localStorage.getItem("logueado");
+      const navButtons = document.getElementById("navButtons");
+      const navUserContainer = document.getElementById("navUserContainer");
+      const userName = document.getElementById("userName");
+
+      if (logueado === "true" && usuario) {
+        navButtons.style.display = "none";
+        navUserContainer.style.display = "block";
+        userName.textContent = usuario;
+      }
+
+      const navUser = document.getElementById("navUser");
+      const userDropdownMenu = document.getElementById("userDropdownMenu");
+      const btnCerrarSesion = document.getElementById("btnCerrarSesion");
+
+      if (navUser) {
+        navUser.addEventListener("click", function (e) {
+          e.stopPropagation();
+          userDropdownMenu.style.display =
+            userDropdownMenu.style.display === "block" ? "none" : "block";
+        });
+      }
+
+      document.addEventListener("click", function (e) {
+        if (!navUserContainer.contains(e.target)) {
+          userDropdownMenu.style.display = "none";
+        }
+      });
+
+      if (btnCerrarSesion) {
+        btnCerrarSesion.addEventListener("click", function () {
+          localStorage.removeItem("usuario");
+          localStorage.removeItem("logueado");
+          navButtons.style.display = "flex";
+          navUserContainer.style.display = "none";
+          window.location.reload();
+        });
+      }
+    </script>
+  </body>
+</html>
